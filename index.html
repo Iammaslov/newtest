@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnpiontTest</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+
+
+</head>
+<body>
+
+<div class="slider">
+        <div class="carousel-inner">
+        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" hidden="" checked="checked">
+        <div class="carousel-item">
+            <div id="fullpage"></div>
+            <div id="firstSlide" class='panel'>  
+                
+            <h1>Всегда ли цели терапии СД2 <br> на поверхности?</h1>
+
+            <div class="pulse">
+                <div class="pulse_Round"></div>
+                <div class="pulse__Round_big"></div>
+            </div>
+            <div class="Round_text">Цель по HbA1c</div>
+
+            <div class="pulse2">
+                <div class="pulse_Round2"></div>
+                <div class="pulse__Round_big2"></div>
+            </div>
+            <div class="Round_text2">Гипогликемия</div>
+
+
+            <div class="pulse3">
+                <div class="pulse_Round3"></div>
+                <div class="pulse__Round_big3"></div>
+            </div>
+            <div class="Round_text3">СС риски</div>
+
+            <div class="pulse4">
+                <div class="pulse_Round4"></div>
+                <div class="pulse__Round_big4"></div>
+            </div>
+            <div class="Round_text4">Осложнения СД</div>
+
+
+            <img class='iceCrown' src="img/firstSlide/firstSlide_iceCrown.png" alt="ice Crown" width="1024px">
+
+            <div class="firstSlide_bottom">
+                <p class="firstSlide_bottom_phrase">Листайте вниз</p>
+
+                <img class='nextSlide' src="img/firstSlide/nextSlide.png" alt="next Slide">
+
+            </div>    
+
+            </div>        
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" hidden="">
+        <div class="carousel-item">
+            
+            <div id="secondSlide" class='panel'>
+
+                <img class='underWaterIce' src="img/secondSlide/underWaterIce.png" alt="Under Water Ice" width='1024px' height='768px'>
+                <div class="secondSlide_Text">Основа терапии &mdash; <br> Патогенез СД2</div> 
+
+            </div>        
+        </div>
+        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" hidden="">
+        <div class="carousel-item">
+            <div id="thirdSlide" class='panel'>
+
+             
+               <div class="horisontal_slider">   
+                <img class='ThirdSlide1998' src="img/thirdSlide/ThirdSlide1998.png" alt="Slide1998" width="1024px" height="768px">
+                
+                
+                
+                
+                <div class="main"> 
+                  <div class="slider slider-nav">
+                    <div><h3><img src="img/thirdSlide/horizontal_1.png" alt="underwater" width='927.5'></h3></div>
+                    <div><h3><img src="img/thirdSlide/horizontal_2.png" class='horizontal_2' alt="underwater" width='978.5'></h3></div>
+                    <div><h3><img src="img/thirdSlide/horizontal_3.png" alt="underwater" width='1024'></h3></div>
+
+                  </div>
+                  <div class="action">
+                      <input type="range" id="range" min="1" value="1" max="3" class="slider" oninput="fun1()">
+                      <div id="test" ></div>
+                  </div>
+                </div>
+           
+                <div class="date1">
+                    1988
+                </div>
+                <div class="date2">
+                    2009
+                </div>
+                <div class="date3">
+                    2016
+                </div>
+              </div>  
+            </div>
+        <label for="carousel-3" class="carousel-control prev control-1"></label>
+        <label for="carousel-2" class="carousel-control next control-1"></label>
+        <label for="carousel-1" class="carousel-control prev control-2"></label>
+        <label for="carousel-3" class="carousel-control next control-2"></label>
+        <label for="carousel-2" class="carousel-control prev control-3"></label>
+        <label for="carousel-1" class="carousel-control next control-3"></label>
+        <!-- Ссылки на навигацию карусели  -->
+        <ol class="carousel-indicators">
+                    <li>
+                        <a href="javascript://0" onclick="slowScroll ('#firstSlide')"><label for="carousel-1" class="carousel-bullet"><span>&#8226;</span></label></a>
+                    </li>
+                    <li>
+                        <a href="javascript://0" onclick="slowScroll ('#secondSlide')"><label for="carousel-2" class="carousel-bullet"><span>&#8226;</span></label></a>
+                    </li>
+                    <li>
+                        <a href="javascript://0" onclick="slowScroll ('#thirdSlide')"><label for="carousel-3" class="carousel-bullet"><span>&#8226;</span></label></a>
+                    </li>
+                </ol>
+    </div>
+  
+</div>    
+</div>
+<script src='js/jQuery.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='js/jquery.scrollify.min.js'></script>
+<script src='js/jquery.easing.min.js'></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src='js/script.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+
+<!-- Скрипт для ссылок на навигацию карусели  -->
+<script>
+    function slowScroll (id) {
+   $('html,body').animate ({
+       scrollTop: $(id).offset ().top
+   }, 300);
+    return false;
+};
+
+ //Горизонтальная карусель    
+    $('.slider-nav').slick({ 
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});  	
+      
+ $('input[type="range"]').on("input change", function(e){
+ e.preventDefault();
+   var slideno = $(this).val(); 
+   $('.slider-nav').slick('slickGoTo', slideno-1);
+ });    
+    
+</script>
+
+</body>
+</html>

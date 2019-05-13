@@ -1,0 +1,514 @@
+*{margin: 0;
+    padding: 0;  
+}
+@font-face {
+			font-family: "GothamProRegular";
+			src: url("../fonts/GothamProRegular/GothamProRegular.eot");
+			src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"),
+			url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+@font-face {
+			font-family: "GothamProLight";
+			src: url("../fonts/GothamProLight/GothamProLight.eot");
+			src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
+			url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+@font-face {
+			font-family: "LatoRegular";
+			src: url("../fonts/LatoRegular/LatoRegular.eot");
+			src: url("../fonts/LatoRegular/LatoRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/LatoRegular/LatoRegular.woff") format("woff"),
+			url("../fonts/LatoRegular/LatoRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+
+
+body{
+    background-color: #000;
+    max-width: 1024px;
+}
+
+h1{
+    font-family: "GothamProRegular";
+    font-size:35pt;
+    line-height: 60px;
+    font-weight:500;
+    display: flex;
+    position: absolute;
+    margin-left: 75px;;
+    margin-top: 140px;
+    color: #0d319c;
+    text-align: left;
+}
+
+/*Пульсирующие вершины с названиями */
+/*Первая вершина*/
+.pulse{
+    display: flex;
+    position: absolute;
+    margin-left: 580px;
+    margin-top: 280px;
+    text-align: left;
+}
+
+.pulse_Round{
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    background: radial-gradient(#cd8548,#c85d53);
+    border-radius: 50%;
+}
+.pulse__Round_big{
+    content: '';
+    position:absolute;
+    left:-20px;
+    right:-20px;
+    top:-20px;
+    bottom:-20px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    border: 3px solid linear-gradient(#c82e48,#de791b);
+    opacity: 0.3;
+}
+
+.pulse_Round::before,
+.pulse_Round::after{
+    content: '';
+    position:absolute;
+    left:-15px;
+    right:-15px;
+    top:-15px;
+    bottom:-15px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    opacity: 0.5;
+    animation: pulse 1.8s linear infinite;
+}
+.pulse_Round::after{
+    animation-delay: 1s;
+}
+
+
+
+@keyframes pulse{
+    0% {
+        transform: scale(0.5);
+        opacity: 0.4;
+        border: 1px solid linear-gradient(#c82e48,#de791b);
+    }
+    50% {
+        transform: scale(0.85);
+        opacity: 0.4;
+        border: 1px solid linear-gradient(#c82e48,#de791b);
+    }
+    100%{
+        transform: scale(1.2);
+        border: 1px solid linear-gradient(#c82e48,#de791b);
+    }
+}
+/*Текст первой вершины*/
+.Round_text{
+    font-family: "LatoRegular";
+    display: flex;
+    position: absolute;
+    margin-left: 620px;
+    margin-top: 280px;
+    text-align: left;
+    color: #0d319c;
+}
+
+
+/*вторая вершина*/
+.pulse2{
+    display: flex;
+    position: absolute;
+    margin-left: 282px;
+    margin-top: 435px;
+    text-align: left;
+}
+
+.pulse_Round2{
+    width: 11px;
+    height: 11px;
+    text-align: center;
+    background: radial-gradient(#cd8548,#c85d53);
+    border-radius: 50%;
+}
+.pulse__Round_big2{
+    content: '';
+    position:absolute;
+    left:-13px;
+    right:-13px;
+    top:-13px;
+    bottom:-13px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    border: 3px solid linear-gradient(#c82e48,#de791b);
+    opacity: 0.3;
+}
+
+.pulse_Round2::before,
+.pulse_Round2::after{
+    content: '';
+    position:absolute;
+    left:-9px;
+    right:-9px;
+    top:-9px;
+    bottom:-9px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    opacity: 0.5;
+    animation: pulse 1.8s linear infinite;
+}
+.pulse_Round2::after{
+    animation-delay: 1s;
+}
+
+/*Текст второй вершины*/
+.Round_text2{
+    font-family: "LatoRegular";
+    display: flex;
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 390px;
+    text-align: left;
+    color: #0d319c;
+}
+
+/*третья вершина*/
+.pulse3{
+    display: flex;
+    position: absolute;
+    margin-left: 827px;
+    margin-top: 522px;
+    text-align: left;
+}
+
+.pulse_Round3{
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    background: radial-gradient(#cd8548,#c85d53);
+    border-radius: 50%;
+}
+.pulse__Round_big3{
+    content: '';
+    position:absolute;
+    left:-5px;
+    right:-5px;
+    top:-5px;
+    bottom:-5px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    border: 3px solid linear-gradient(#c82e48,#de791b);
+    opacity: 0.3;
+}
+
+.pulse_Round3::before,
+.pulse_Round3::after{
+    content: '';
+    position:absolute;
+    left:-4px;
+    right:-4px;
+    top:-4px;
+    bottom:-4px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    opacity: 0.5;
+    animation: pulse 1.8s linear infinite;
+}
+.pulse_Round3::after{
+    animation-delay: 1s;
+}
+
+/*Текст третьей вершины*/
+.Round_text3{
+    font-family: "LatoRegular";
+    display: inline-block;
+    position: absolute;
+    margin-left: 795px;
+    margin-top: 495px;
+    text-align: left;
+    color: #0d319c;
+}
+
+/*четвертая вершина*/
+.pulse4{
+    display: flex;
+    position: absolute;
+    margin-left: 485px;
+    margin-top: 545px;
+    text-align: left;
+}
+
+.pulse_Round4{
+    width: 5px;
+    height: 5px;
+    text-align: center;
+    background: radial-gradient(#cd8548,#c85d53);
+    border-radius: 50%;
+}
+.pulse__Round_big4{
+    content: '';
+    position:absolute;
+    left:-5px;
+    right:-5px;
+    top:-5px;
+    bottom:-5px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    border: 3px solid linear-gradient(#c82e48,#de791b);
+    opacity: 0.3;
+}
+
+.pulse_Round4::before,
+.pulse_Round4::after{
+    content: '';
+    position:absolute;
+    left:-4px;
+    right:-4px;
+    top:-4px;
+    bottom:-4px;
+    border-radius: 50%;
+    background: linear-gradient(#c82e48,#de791b);
+    opacity: 0.5;
+    animation: pulse 1.8s linear infinite;
+}
+.pulse_Round4::after{
+    animation-delay: 1s;
+}
+
+/*Текст четвертой вершины*/
+.Round_text4{
+    font-family: "LatoRegular";
+    display: inline-block;
+    position: absolute;
+    margin-left: 425px;
+    margin-top: 515px;
+    text-align: left;
+    color: #0d319c;
+}
+
+/*Кнопка "листайте вниз"*/
+
+.firstSlide_bottom{
+    margin-top: -80px;
+    text-align: center;
+    width: 1024px;
+}
+.firstSlide_bottom_phrase{
+    padding-bottom:10px;
+}
+.firstSlide_bottom p{
+    margin-left: 30px;
+    color: rgb(255,255,255);
+}
+.firstSlide_bottom img.nextSlide{
+    z-index: 100;
+    margin-top: -55px;
+    margin-left: -30px;
+}
+
+
+/*Второй слайд*/
+
+img.underWaterIce{
+    margin-top: -2.5px;
+    position: absolute;
+    z-index: -1;
+}
+
+.secondSlide_Text{
+    font-family: "GothamProLight";
+    font-size:35pt;
+    line-height: 60px;
+    font-weight:500;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+    padding-top: 256px;
+    width: 1024px;
+    
+}
+
+/*Третий слайд*/
+
+/*1998*/
+
+img.ThirdSlide1998{
+    position: absolute;
+    z-index: -1;
+    margin-top: -2px;
+}
+
+
+
+
+/*Анимация 3 страницы*/
+
+
+/*Полоса прокрутки IceCube*/
+
+input.slider {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 600px; 
+    height: 12px; 
+    background: #435063;
+    position: absolute;
+    margin-top: -120px;
+    margin-left: 220px;
+}
+
+input.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 46px; 
+    height: 58px; 
+    background: url('../img/thirdSlide/iceCube.png') no-repeat;
+    cursor: pointer;   
+}
+
+
+#test {
+    height: 12px;
+    width:600px;
+    background: #d1eaff;
+    margin-top: -17px;
+    z-index: 2;
+    display: block;
+    margin-left: 220px;
+    position: absolute;
+    margin-top: -120px;
+}
+
+
+
+.main {
+  font-family:Arial;
+  width:1024px;
+    height: 768px;
+  display:block;
+  margin:0 auto;
+}
+h3 {
+    position: relative;
+    text-align: center;
+}
+img.horizontal_2{
+    margin-left: 45px;
+}
+
+
+
+.slider.slider-nav.slick-initialized.slick-slider {
+    margin: 0;
+}
+
+
+
+.date1{
+    font-family: "GothamProRegular";
+    display: inline-block;
+    color: white;
+    position: absolute;
+    margin-top: -170px;
+    margin-left: 220px;
+    font-size:20pt;
+}
+.date2{
+    font-family: "GothamProRegular";
+    display: inline-block;
+    color: white;
+    position: absolute;
+    margin-top: -170px;
+    margin-left: 490px;
+    font-size:20pt;
+}
+.date3{
+    font-family: "GothamProRegular";
+    display: inline-block;
+    color: white;
+    position: absolute;
+    margin-top: -170px;
+    margin-left: 760px;
+    font-size:20pt;
+}
+
+
+/*Карусель вертикальных слайдов*/
+
+
+.carousel-item #firstSlide {
+    display: block;
+    height: 768px;
+    max-width: 100%;
+}
+.carousel-item #secondSlide {
+    display: block;
+    height: 768px;
+    max-width: 100%;
+}
+.carousel-item #thirdSlide {
+    display: block;
+    height: 768px;
+    max-width: 100%;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    margin-top: -1950px;
+    position: fixed;
+}
+
+.carousel-indicators li { 
+    margin-left: 990px;
+}
+
+.carousel-bullet {
+    height: 20px;
+    width: 20px;
+    color: #fff;
+    cursor: pointer; 
+    font-size: 50px;
+    padding-bottom: 13px;
+    display: block;
+}
+
+.carousel-bullet:hover {
+    color: #f78b1f;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #f78b1f;
+}
+
+.carousel-indicators li a{
+    text-decoration:none;
+}
+
+
+
+
+
+
+
